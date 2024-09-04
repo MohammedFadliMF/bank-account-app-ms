@@ -69,4 +69,12 @@ services:
     depends_on:
       ebank-config-service:
         condition: service_healthy
+  front-end:
+    build: ./front-end
+    container_name: front-end
+    ports:
+      - '80:80'
+    expose:
+      - '80'
+
 
